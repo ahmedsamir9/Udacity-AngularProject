@@ -1,0 +1,36 @@
+
+<h1 class="empty-cart-message"*ngIf="cart.cartItems.length == 0">The Cart is Empty </h1>
+
+<form #f ="ngForm" class="cart-container" *ngIf="!(cart.cartItems.length == 0)">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+      <app-cart-item *ngFor="let cartItem of cart.cartItems" [item]="cartItem" (itemEmitter)="removeFromCart($event)"
+      (itemEmitterAdder)="changeQuantity()"
+      ></app-cart-item>
+      <h3>Total Price : $ {{cart.totalPrice}}</h3>
+      </div>
+      <div class="col">
+       <form #ngForm ="ngForm" (ngSubmit)="submitOrder()">
+        <label>Full Name</label>
+        <div></div>
+        <input type="text" required minlength="3" placeholder="minimum 3 Character" name="name" [(ngModel)]="cart.name">
+        <div></div>
+        <label>Address</label>
+        <div></div>
+        <input type="text" required minlength="3" placeholder="minimum 6 Character" name="addres" [(ngModel)]="cart.address">
+        <div></div>
+        <label>Card Number</label>
+        <div></div>
+        <input type="text" required minlength="16" maxlength="16" placeholder="must enter 16 Character" name="card" [(ngModel)]="cart.cardNumber">
+        <div></div>
+        <button class="btnnn"
+          type="submit"
+
+        [disabled]="!ngForm.form.valid">Submit</button>
+
+       </form>
+      </div>
+    </div>
+    </div>
+</form>

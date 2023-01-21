@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+.btnnn{
+  /* Adding the rounded corners */
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 10px 10px;
+  margin-top: 16px;
+  background:#33B5E5;
+  color: #fff
+}
