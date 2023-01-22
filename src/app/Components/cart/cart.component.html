@@ -22,7 +22,7 @@
         <div></div>
         <label>Card Number</label>
         <div></div>
-        <input type="text" required minlength="16" maxlength="16" appOnlyNumbers  placeholder="must enter 16 Character" name="card" [(ngModel)]="cart.cardNumber">
+        <input type="text" required minlength="16" maxlength="16" appOnlyNumbers pattern="^[0-9]*$" placeholder="must enter 16 Character" name="card" [(ngModel)]="cart.cardNumber">
         <div></div>
         <button class="btnnn"
           type="submit"
