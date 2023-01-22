@@ -14,6 +14,7 @@ import{HttpClientModule} from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { FormsModule } from '@angular/forms';
 import { CartItemComponent } from './Components/cart-item/cart-item.component';
+import { OnlyNumbersDirective } from './Directives/only-numbers.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CartItemComponent } from './Components/cart-item/cart-item.component';
     ConfirmationComponent,
     ProductDetailComponent,
     PageNotFoundComponent,
-    CartItemComponent
+    CartItemComponent,
+    OnlyNumbersDirective
   ],
   imports: [
     BrowserModule,
